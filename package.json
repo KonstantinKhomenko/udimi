@@ -7,10 +7,10 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint:js": "eslint --ext \\\".js,.ts,.vue\\\" --ignore-path .gitignore .",
-    "lint:prettier": "prettier --check udimi-test",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:prettier",
-    "lintfix": "prettier --write --list-different udimi-test && yarn lint:js --fix"
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
@@ -22,9 +22,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
-    "@nuxt/types": "^2.15.8",
-    "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/eslint-config-typescript": "^11.0.0",
+    "@nuxtjs/eslint-config": "^11.0.0",
     "@nuxtjs/eslint-module": "^3.1.0",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
