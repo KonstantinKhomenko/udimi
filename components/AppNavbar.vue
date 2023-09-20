@@ -4,7 +4,9 @@
       <span class="font-weight-bold">Q</span>
     </div>
     <div class="d-flex">
-      <nuxt-link class="navbar-link" to="/">PROJECTS</nuxt-link>
+      <nuxt-link class="navbar-link" :to="{ name: 'projects' }"
+        >PROJECTS</nuxt-link
+      >
 
       <div class="navbar-link" @click="logout">LOGOUT</div>
     </div>
