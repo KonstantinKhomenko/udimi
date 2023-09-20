@@ -18,7 +18,7 @@ export default {
   css: ['~/assets/css/style.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/vee-validate.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -33,14 +33,30 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: 'https://api.quwi.com/v2/',
+    browserBaseURL: 'https://api.quwi.com/v2/',
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: 'auth/login', method: 'post', propertyName: 'token' },
+          logout: false,
+          user: false,
+        },
+      },
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ['vee-validate/dist/rules'],
+  },
 }
