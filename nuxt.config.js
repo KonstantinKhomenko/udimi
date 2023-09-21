@@ -1,5 +1,7 @@
 export default {
-  target: 'static',
+  router: {
+    middleware: 'auth-guard'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'udimi-test',

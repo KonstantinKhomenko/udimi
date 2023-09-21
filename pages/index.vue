@@ -30,8 +30,6 @@ export default {
     ProjectItem,
   },
 
-  middleware: ['auth'],
-
   data: () => ({
     selectedId: null,
     isShownModal: false,
