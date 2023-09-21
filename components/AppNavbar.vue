@@ -4,7 +4,7 @@
       <span class="font-weight-bold">Q</span>
     </div>
     <div class="d-flex">
-      <nuxt-link class="navbar-link" :to="{ name: 'projects' }"
+      <nuxt-link class="navbar-link" to="/"
         >PROJECTS</nuxt-link
       >
 

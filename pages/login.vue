@@ -71,7 +71,7 @@ export default {
           },
         })
 
-        this.$router.push({ name: 'projects' })
+        this.$router.push('/')
       } catch (error) {
         alert(error.response.data.first_errors.email)
       }
